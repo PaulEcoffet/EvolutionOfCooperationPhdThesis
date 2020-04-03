@@ -1,0 +1,75 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[french]{babel}
+\graphicspath{ {media/} }
+\usepackage{csquotes}
+
+%% Create the xx commande
+\usepackage{soulutf8}  % Add the \hl command from soulutf8
+\usepackage[dvipsnames]{xcolor}  % Add the color Apricot
+\newcommand{\xx}[1]{%
+  \begingroup
+  \sethlcolor{Apricot}%
+  \hl{xx #1 xx}%
+  \endgroup
+}
+
+% To remove avec todo
+\setlength {\marginparwidth }{2cm} % ajoute un peu de marges pour les todo
+\usepackage{todonotes}
+% To remove avec todo
+
+\usepackage[natbib=true,backend=biber,style=apa]{biblatex}
+\addbibresource{references.bib}
+
+
+\title{
+{Evolution of Cooperation in Collective Adaptative Systems}\\
+{\large Sorbonne Université}\\
+{\includegraphics[width=\textwidth]{university.png}}
+}
+\author{Paul Ecoffet}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\chapter*{Abstract}
+Abstract goes here
+
+\chapter*{Dedication}
+To mum and dad
+
+\chapter*{Declaration}
+I declare that..
+
+\chapter*{Acknowledgements}
+I want to thank...
+
+\tableofcontents
+
+\chapter{Introduction}
+\input{chapters/01introduction}
+
+\chapter{State of the Art}
+\input{chapters/02stateoftheart}
+
+\chapter{Nothing better to do? Environment quality and the evolution of cooperation by partner choice}
+\input{chapters/03Lions}
+
+\chapter{Cooperation in robotic swarms}
+\input{chapters/04RoboCoop}
+
+\chapter{Discussion}
+\input{chapters/05Discussion}
+
+\printbibliography
+
+
+\end{document}
